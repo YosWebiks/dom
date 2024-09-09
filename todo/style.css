@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
@@ -11,6 +15,7 @@ body {
     /* position: relative; */
     display: flex;
     flex-direction: column;
+    
 }
 
 .flex-center {
@@ -41,6 +46,9 @@ body {
 .td-wrap {
     justify-content: space-between;
     width: 55vw;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 5px;
 }
 
 .completed {
@@ -57,4 +65,8 @@ body {
 .del:hover {
     color: red;
     background-color: rgba(255, 0, 0, 0.278);
+}
+
+.hovered{
+    background-color: rgba(255, 0, 0, 0.189);
 }
