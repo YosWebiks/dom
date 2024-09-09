@@ -61,8 +61,8 @@ const createToDoSectionFromEvent = () => {
 
 const createToDoSectionFromMemory = (td) => createToDoSection(td.title, td.checked)
 
-const addParentHover = e => e.target.parentElement.classList.add("hovered")
-const rmParentHover = e => e.target.parentElement.classList.remove("hovered")
+const addParentHover = e => e.target.parentElement.parentElement.classList.add("hovered")
+const rmParentHover = e => e.target.parentElement.parentElement.classList.remove("hovered")
 
 // create section func
 const createToDoSection = (title, checked = false) => {
@@ -80,6 +80,7 @@ const createToDoSection = (title, checked = false) => {
     td.classList.add('td')
     checked && td.classList.add('completed')
     td.textContent = title
+    const actnWrap = document.createElement('div')
     const del = document.createElement('p')
     del.classList.add('del')
     del.classList.add('flex-center')
@@ -93,7 +94,8 @@ const createToDoSection = (title, checked = false) => {
     lbl.appendChild(cb)
     lbl.appendChild(td)
     tdWrap.appendChild(lbl)
-    tdWrap.appendChild(del)
+    actnWrap.appendChild(del)
+    tdWrap.appendChild(actnWrap)
     list.appendChild(tdWrap)
 }
 

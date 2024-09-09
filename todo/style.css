@@ -71,7 +71,7 @@ body {
     background-color: rgba(255, 0, 0, 0.189);
 }
 
-.del-completed{
+/* .del-completed{
     cursor: not-allowed;
     pointer-events: none;
-}
+} */
