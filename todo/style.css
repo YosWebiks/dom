@@ -70,3 +70,8 @@ body {
 .hovered{
     background-color: rgba(255, 0, 0, 0.189);
 }
+
+.del-completed{
+    cursor: not-allowed;
+    pointer-events: none;
+}

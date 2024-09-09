@@ -34,7 +34,7 @@ const delFromLocalStorage = (title) => {
 
 // load from localStorage
 const loadFromLocalStorage = ()=> {
-    const arr = JSON.parse(localStorage.todos)
+    const arr = JSON.parse(localStorage.todos) || []
     for (const td of arr) {
         createToDoSectionFromMemory(td)
     }
@@ -46,7 +46,6 @@ const markCompleted = e => {
         e.target.nextSibling.classList.add("completed") :
         e.target.nextSibling.classList.remove("completed")
     updateLocalStorage(e.target.nextSibling.textContent, e.target.checked)
-
 }
 
 // completed even
@@ -84,6 +83,7 @@ const createToDoSection = (title, checked = false) => {
     const del = document.createElement('p')
     del.classList.add('del')
     del.classList.add('flex-center')
+    !checked && del.classList.add('del-completed')
     del.textContent = '🗑️'
     del.addEventListener('click', delToDo)
     del.addEventListener('mouseenter', addParentHover)
