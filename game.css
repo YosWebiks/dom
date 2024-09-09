@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: whitesmoke;
+    border: 15px solid brown;
+    position: relative;
+}
+
+.qube{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    position: absolute;
+    top:1px;
+    left: 1px;
+}

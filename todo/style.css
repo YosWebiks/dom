@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: whitesmoke;
+    /* border: 15px solid brown; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls {
+    height: 100px;
+}
+
+.controls * {
+    padding: 5px;
+}
+
+.controls input {
+    width: 300px;
+    padding: 6px;
+}
+
+.list {
+    flex-direction: column;
+
+}
+
+.td-wrap {
+    justify-content: space-between;
+    width: 55vw;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.del{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.del:hover {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.278);
+}
