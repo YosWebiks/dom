@@ -16,6 +16,7 @@ const saveToLocalStorage = title => {
     const arr = JSON.parse(localStorage.todos || "[]") 
     arr.push({ title, checked: false })
     localStorage.todos = JSON.stringify(arr)
+    inp.value = ""
 }
 
 //
